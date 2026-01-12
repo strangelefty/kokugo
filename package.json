@@ -1,0 +1,18 @@
+{
+  "name": "kokugo-test-app",
+  "version": "1.0.0",
+  "description": "小学1年生向けの国語テストアプリケーション（24回分、各10問）",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "japanese",
+    "education",
+    "grade1",
+    "test"
+  ],
+  "author": "",
+  "license": "MIT"
+}

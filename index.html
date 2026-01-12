@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小学1年生 国語テスト - 24回分</title>
+    <meta name="description" content="小学1年生向けの国語テスト作成・印刷アプリケーション">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- メインコンテナ -->
+    <div class="container" id="mainContainer">
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="header-mascots">
+                <img src="images/top-mascots.png" alt="かわいいキャラクターたち">
+            </div>
+            <div class="header-content">
+                <!-- <div class="header-icon">📚</div> -->
+                <h1 class="header-title">小学1年生 国語テスト</h1>
+                <div class="header-subtitle">1年間で24回のテスト</div>
+            </div>
+        </header>
+
+        <!-- コーナーキャラクター（固定表示） -->
+        <div class="corner-mascot">
+            <img src="images/corner-mascot.png" alt="ひょっこりキャラクター">
+        </div>
+
+
+        <!-- テスト選択画面 -->
+        <div class="test-selection" id="testSelection">
+            <div class="intro-section">
+                <h2 class="section-title">テストを選んでください</h2>
+                <p class="intro-text">
+                    2週間に1回のペースで、1年間で24回のテストを行います。<br>
+                    各回10問の問題が含まれています。
+                </p>
+            </div>
+
+            <!-- 前期テスト -->
+            <div class="period-section">
+                <div class="period-header">
+                    <span class="period-icon">🌸</span>
+                    <h3 class="period-title">前期（第1〜12回）</h3>
+                    <span class="period-date">4月〜9月</span>
+                </div>
+                <div class="period-description">
+                    ひらがな・カタカナの読み書き、簡単な文づくり、短い文章の読解
+                </div>
+                <div class="test-grid" id="firstPeriodTests"></div>
+            </div>
+
+            <!-- 後期テスト -->
+            <div class="period-section">
+                <div class="period-header">
+                    <span class="period-icon">🍂</span>
+                    <h3 class="period-title">後期（第13〜24回）</h3>
+                    <span class="period-date">10月〜3月</span>
+                </div>
+                <div class="period-description">
+                    前期の内容＋漢字の読み書き、長い文章の読解、主語・述語
+                </div>
+                <div class="test-grid" id="secondPeriodTests"></div>
+            </div>
+        </div>
+
+        <!-- テスト表示画面 -->
+        <div class="test-view" id="testView" style="display: none;">
+            <div class="test-controls">
+                <button class="btn btn-secondary" id="backBtn">← 戻る</button>
+                <button class="btn btn-primary" id="printBtn">🖨️ 印刷する</button>
+            </div>
+
+            <div class="test-paper" id="testPaper">
+                <!-- テスト用紙がここに表示されます -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 印刷用スタイルとスクリプト -->
+    <script src="app.js"></script>
+</body>
+
+</html>
